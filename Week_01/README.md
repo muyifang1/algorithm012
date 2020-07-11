@@ -1,5 +1,5 @@
 学习笔记
-HomeWork
+# HomeWork
 简单：
 用 add first 或 add last 这套新的 API 改写 Deque 的代码
 分析 Queue 和 Priority Queue 的源码
@@ -21,8 +21,8 @@ HomeWork
 最小的 k 个数
 
 ========================================================
-分析 Queue 和 PriorityQueue 源码
- Queue 接口
+## 分析 Queue 和 PriorityQueue 源码
+ ### Queue 接口
  方法 ：
     - add(E e) 将指定元素插入队列中。如果成功返回true；如果超出空间范围抛出 IllegalStateException异常
     - offer(E e) 将指定元素插入队列中。成功则返回true；与add区别是超出空间范围不抛异常。
@@ -31,7 +31,7 @@ HomeWork
     - element 返回队列head元素，但不做删除操作,如果队列空则抛 NoSuchElementException异常。
     - peek 返回队列head元素，但不做删除操作，如果队列空则返回 null。
 
- AbstractQueue抽象类
+ ### AbstractQueue抽象类
  AbstractQueue implements Queue
     - add(E e)  直接调用 offer(e) 失败则抛异常 IllegalStateException("Queue full") 源码如下
     - remove() 和 element() 同理实现。
@@ -65,17 +65,17 @@ HomeWork
     }
 ----------------------
 
- PriorityQueue类
+ ### PriorityQueue类
  PriorityQueue extends AbstractQueue 
     - Object[] queue; 通过queue属性来存储，底层是Object数组。
     - int modCount 属性用来记录修改次数
     - private final Comparator<? super E> comparator; 属性comparator用来实现优先级比较。
     - ensureNonEmpty(Object[] es) 用来确保存在queue[0]元素，peek() 和 poll()实现的避免异常出现。源码如下
-----------------------
+```
     private static Object[] ensureNonEmpty(Object[] es) {
         return (es.length > 0) ? es : new Object[1];
     }
-----------------------
+```
     - void grow(int minCapacity) 扩容方法的具体实现。注意ArraysSupport.newLength方法
        新长度 = Max(指定长度减去原始长度，原始长度如果小于64 则 +2 否则 double) + 原始长度
 ----------------------
