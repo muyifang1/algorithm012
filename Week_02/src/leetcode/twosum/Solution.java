@@ -32,8 +32,8 @@ public class Solution {
     public static void main(String[] args) {
         Solution solution = new Solution();
 
-        int[] numbs = new int[]{2, 7, 0, 1};
-        int target = 9;
+        int[] numbs = new int[]{2, 3, 4};
+        int target = 6;
         String result = Arrays.toString(solution.twoSum(numbs, target));
         System.out.println("result = " + result);
     }
