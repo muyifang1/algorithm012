@@ -43,6 +43,6 @@ public class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println("result = " + Arrays.toString(solution.generateParentheses(1).toArray()));
+        System.out.println("result = " + Arrays.toString(solution.generateParentheses(3).toArray()));
     }
 }
