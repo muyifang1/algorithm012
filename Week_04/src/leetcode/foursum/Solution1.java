@@ -57,8 +57,8 @@ public class Solution1 {
         Solution1 solution = new Solution1();
 //[-1,0,1,2,-1,-4]
 //-1
-        int[] numbs = new int[]{-1, 0, 1, 2, -1, -4};
-        int target = -1;
+        int[] numbs = new int[]{0, 0, 0, 0};
+        int target = 0;
 
         System.out.println("fourSum result = " + solution.fourSum(numbs, target).toString());
     }
