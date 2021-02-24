@@ -60,6 +60,6 @@ public class Solution {
 
         System.out.println("solution = " + solution.minimumTotal(triangle));
 
-        List.of();
+        // List.of();
     }
 }
